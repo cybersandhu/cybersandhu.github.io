@@ -1,0 +1,93 @@
+/* Basic modern, responsive, dark-first design */
+:root {
+  --bg: #0b0f14;
+  --surface: #121823;
+  --surface-2: #0f1520;
+  --text: #e6edf3;
+  --muted: #a1adbb;
+  --brand: #7c3aed; /* violet */
+  --brand-2: #06b6d4; /* cyan */
+  --ok: #22c55e;
+  --warn: #f59e0b;
+  --error: #ef4444;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+  background: radial-gradient(1000px 500px at 110% -20%, rgba(124,58,237,.25), transparent 50%),
+              radial-gradient(800px 400px at -10% -10%, rgba(6,182,212,.25), transparent 50%),
+              var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container{width:min(1100px, 92%); margin: 0 auto;}
+
+.site-header{
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: blur(10px);
+  background: rgba(11,15,20,.6);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.nav{display:flex; align-items:center; justify-content:space-between; padding: 12px 0;}
+.brand{display:flex; align-items:center; gap:.6rem; text-decoration:none; color:var(--text); font-weight:700}
+.brand img{width:28px;height:28px}
+.menu{display:flex; align-items:center; gap:1rem}
+.menu a{color:var(--text); text-decoration:none; opacity:.9}
+.menu a:hover{opacity:1}
+.btn{padding:.6rem 1rem; border-radius:999px; border:1px solid rgba(255,255,255,.1); background:transparent; color:var(--text); cursor:pointer; text-decoration:none; display:inline-block}
+.btn-primary{background:linear-gradient(90deg, var(--brand), var(--brand-2)); border:0; box-shadow:var(--shadow)}
+.btn-ghost{background:transparent}
+
+.hero{padding: 72px 0}
+.hero-grid{display:grid; grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items:center}
+.eyebrow{letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:700; font-size:.8rem}
+h1{font-size: clamp(2.2rem, 4vw, 3.5rem); line-height:1.1; margin:.4rem 0 1rem}
+.lead{font-size:1.1rem; color: var(--muted)}
+.cta-row{display:flex; gap: .8rem; margin: 1rem 0 1.2rem}
+.quick-facts{display:grid; grid-template-columns: 1fr; gap:.2rem; padding-left:1rem}
+.quick-facts li{color:var(--muted)}
+
+.hero-art img{width:100%; max-width:520px; display:block; margin-inline:auto}
+
+.section{padding: 56px 0}
+.section.alt{background: linear-gradient(180deg, rgba(255,255,255,.02), transparent)}
+.two-col{display:grid; grid-template-columns: 1fr .9fr; gap: 1.4rem; align-items:start}
+@media (max-width: 900px){
+  .hero-grid, .two-col{grid-template-columns: 1fr}
+}
+
+.card{background: var(--surface); border: 1px solid rgba(255,255,255,.06); border-radius: var(--radius); padding: 1rem; box-shadow: var(--shadow)}
+.cards{grid-template-columns: repeat(3, 1fr); display:grid; gap: 1rem}
+.cards .card h4{margin-top:.3rem; margin-bottom:.3rem}
+.grid{display:grid; gap: 1rem}
+.project-grid{grid-template-columns: repeat(3, 1fr)}
+@media (max-width: 900px){
+  .cards{grid-template-columns: 1fr 1fr}
+  .project-grid{grid-template-columns: 1fr}
+}
+
+.meta{color: var(--muted)}
+.meta li{margin:.2rem 0}
+
+.checklist{list-style: "✅ "; padding-left: 1.3rem}
+.checklist li{margin:.2rem 0}
+
+.chips{display:flex; gap:.5rem; flex-wrap:wrap}
+.chip{background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); padding:.25rem .6rem; border-radius:999px; color:var(--text); font-size:.9rem}
+
+.steps{counter-reset: s; list-style:none; padding-left:0}
+.steps li{counter-increment: s; position:relative; padding-left: 2.4rem; margin:.6rem 0}
+.steps li::before{content: counter(s); position:absolute; left:0; top:0; width:1.8rem; height:1.8rem; display:grid; place-items:center; background:linear-gradient(90deg, var(--brand), var(--brand-2)); border-radius:999px; font-weight:800}
+
+.contact-list{list-style:none; padding:0; margin:.5rem 0}
+.contact-list a{color:var(--text); text-decoration: none; border-bottom:1px dashed rgba(255,255,255,.2)}
+.socials{display:flex; gap:.8rem; margin-top:.6rem}
+.socials a{color:var(--text); text-decoration:none; opacity:.85}
+.socials a:hover{opacity:1}
+
+.site-footer{padding: 32px 0; border-top: 1px solid rgba(255,255,255,.06); background: var(--surface-2); color: var(--muted)}

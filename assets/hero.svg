@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="600">
+      <stop stop-color="#0b0f14"/>
+      <stop offset="1" stop-color="#121823"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <g opacity=".15">
+    <circle cx="650" cy="100" r="140" fill="url(#g2)"/>
+    <circle cx="120" cy="40" r="120" fill="url(#g2)"/>
+  </g>
+  <g transform="translate(200,120)">
+    <path d="M120 240c-60-30-80-100-36-150 18-20 44-32 72-34 30-3 62 6 84 28 22 21 30 53 26 84-2 16-16 30-32 32-12 1-24-4-32-13-10-11-23-20-38-25-20-8-38-1-54 8-12 7-24 13-36 20 14 22 26 31 46 40z" fill="url(#g2)"/>
+    <circle cx="250" cy="150" r="10" fill="#e6edf3"/>
+  </g>
+  <text x="60" y="500" fill="#e6edf3" font-family="Inter, system-ui" font-size="28">Humanoid shark hacker • Cyber_Sandhu</text>
+</svg>

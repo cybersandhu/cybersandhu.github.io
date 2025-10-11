@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect rx="14" ry="14" width="64" height="64" fill="#0f1520"/>
+  <path d="M12 40c8-10 18-12 28-8 4 2 8 2 12 0-4 10-12 16-22 16-6 0-12-2-18-8z" fill="url(#g)"/>
+  <path d="M24 22c6-4 14-4 18 2 2 2 2 5 0 7-2 2-5 2-7 0-3-4-7-6-11-9z" fill="url(#g)" opacity=".8"/>
+  <circle cx="40" cy="26" r="2.5" fill="#e6edf3"/>
+  <text x="10" y="56" font-family="monospace" font-size="9" fill="#e6edf3">CS</text>
+</svg>
